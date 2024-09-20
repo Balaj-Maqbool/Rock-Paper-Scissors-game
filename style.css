@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: whitesmoke;
+}
+
+h1 {
+    height: 6rem;
+    width: 100vw;
+    background: linear-gradient(45deg, rgb(48, 1, 71), black, rgb(1, 57, 15));
+    color: rgb(2, 252, 252);
+    text-align: center;
+    align-content: center;
+    font-size: 3rem;
+
+}
+
+.choices {
+    height: 20rem;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+.choice {
+    height: 185px;
+    width: 185px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+
+
+}
+
+img {
+    height: 170px;
+    width: 170px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.choice:hover {
+    cursor: pointer;
+    background: linear-gradient(45deg, rgb(48, 1, 71), black, rgb(1, 57, 15));
+}
+
+.score-board {
+    height: 5rem;
+    width: 100vw;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 100px;
+}
+
+.msg {
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 50px;
+}
+
+.msg p {
+    height: 3rem;
+    text-align: center;
+    align-content: center;
+    display: inline;
+    background: linear-gradient(45deg, rgb(48, 1, 71), black, rgb(1, 57, 15));
+    color: aliceblue;
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-right: 2rem;
+}
