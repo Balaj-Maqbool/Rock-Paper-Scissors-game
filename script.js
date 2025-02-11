@@ -2,7 +2,6 @@ let choices = document.querySelectorAll(".choice");
 let msg = document.querySelector("#msg");
 let user_Score = document.querySelector("#userscore");
 let comp_Score = document.querySelector("#compscore");
-console.log(choices);
 let userScore = 0;
 let compScore = 0;  
 

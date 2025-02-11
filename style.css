@@ -1,32 +1,52 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+/* Body Styling */
 body {
     background-color: whitesmoke;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
 }
 
+/* Title */
 h1 {
-    height: 6rem;
     width: 100vw;
+    height: 6rem;
     background: linear-gradient(45deg, rgb(48, 1, 71), black, rgb(1, 57, 15));
     color: rgb(2, 252, 252);
     text-align: center;
-    align-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 3rem;
-
+    font-weight: bold;
+    transition: background 0.5s ease-in-out;
 }
 
+/* Hover Effect on Title */
+h1:hover {
+    background: linear-gradient(45deg, rgb(30, 0, 50), black, rgb(0, 40, 10));
+}
+
+/* Choices Section */
 .choices {
-    height: 20rem;
-    width: 100vw;
+    height: auto;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 4rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
 }
 
+/* Individual Choice */
 .choice {
     height: 185px;
     width: 185px;
@@ -34,53 +54,188 @@ h1 {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-
-
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
 }
 
+/* Image Inside Choices */
 img {
     height: 170px;
     width: 170px;
     object-fit: cover;
     border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
 }
 
+/* Hover Effect */
 .choice:hover {
     cursor: pointer;
     background: linear-gradient(45deg, rgb(48, 1, 71), black, rgb(1, 57, 15));
+    transform: scale(1.1);
 }
 
+/* Image Hover Effect */
+.choice:hover img {
+    transform: scale(1.05);
+}
+
+/* Scoreboard */
 .score-board {
-    height: 5rem;
-    width: 100vw;
+    height: auto;
+    width: 100%;
     display: flex;
-    text-align: center;
     justify-content: center;
     align-items: center;
-    gap: 10rem;
+    gap: 8rem;
     font-size: 2rem;
     font-weight: 700;
-    margin-top: 100px;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+    text-align: center;
 }
 
+/* Message Box */
 .msg {
-    height: 5rem;
     display: flex;
     justify-content: center;
-    align-content: center;
-    margin-top: 50px;
+    align-items: center;
+    margin-top: 2rem;
 }
 
+/* Message Box Styling */
 .msg p {
-    height: 3rem;
-    text-align: center;
-    align-content: center;
-    display: inline;
+    display: inline-block;
     background: linear-gradient(45deg, rgb(48, 1, 71), black, rgb(1, 57, 15));
     color: aliceblue;
-    padding: 1rem;
+    padding: 1rem 2rem;
     border-radius: 1rem;
     font-size: 2rem;
     font-weight: 700;
-    margin-right: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+/* Message Hover Effect */
+.msg p:hover {
+    background: linear-gradient(45deg, rgb(30, 0, 50), black, rgb(0, 40, 10));
+    transform: scale(1.1);
+}
+
+/* RESPONSIVENESS */
+
+/* Large Tablets */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 2.5rem;
+        height: 5.5rem;
+    }
+
+    .choice {
+        height: 150px;
+        width: 150px;
+    }
+
+    img {
+        height: 140px;
+        width: 140px;
+    }
+
+    .score-board {
+        gap: 6rem;
+        font-size: 1.8rem;
+    }
+
+    .msg p {
+        font-size: 1.8rem;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+        height: 5rem;
+    }
+
+    .choices {
+        gap: 2rem;
+    }
+
+    .choice {
+        height: 120px;
+        width: 120px;
+    }
+
+    img {
+        height: 110px;
+        width: 110px;
+    }
+
+    .score-board {
+        gap: 4rem;
+        font-size: 1.5rem;
+    }
+
+    .msg p {
+        font-size: 1.5rem;
+    }
+}
+
+/* Mobile Screens */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+        height: 4.5rem;
+    }
+
+    .choices {
+        gap: 1.5rem;
+    }
+
+    .choice {
+        height: 100px;
+        width: 100px;
+    }
+
+    img {
+        height: 90px;
+        width: 90px;
+    }
+
+    .score-board {
+        gap: 2rem;
+        font-size: 1.3rem;
+    }
+
+    .msg p {
+        font-size: 1.3rem;
+        padding: 0.8rem 1.5rem;
+    }
+}
+
+/* Extra Small Screens */
+@media (max-width: 360px) {
+    h1 {
+        font-size: 1.5rem;
+        height: 4rem;
+    }
+
+    .choice {
+        height: 90px;
+        width: 90px;
+    }
+
+    img {
+        height: 80px;
+        width: 80px;
+    }
+
+    .score-board {
+        gap: 1.5rem;
+        font-size: 1.2rem;
+    }
+
+    .msg p {
+        font-size: 1.2rem;
+        padding: 0.7rem 1.2rem;
+    }
 }
